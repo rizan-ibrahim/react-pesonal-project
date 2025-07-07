@@ -1,0 +1,21 @@
+.weather-header {
+  text-align: center;
+  padding: 4rem 1rem 1rem;
+}
+
+.weather-header img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.weather-header h1 {
+  font-size: 2rem;
+  color: #020d19;
+  margin-bottom: 0.5rem;
+}
+
+.weather-header p {
+  font-size: 1.3rem;
+  color: #040000;
+}

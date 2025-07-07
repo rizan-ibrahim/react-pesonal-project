@@ -1,0 +1,32 @@
+.forecast-item {
+  /* background-color: #609302; */
+  border: 1px solid #034d0b;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  width: 70px;
+  box-shadow: 4px 2px 5px rgba(3, 246, 19, 0.951);
+  font-family: Arial, sans-serif;
+}
+
+.forecast-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40%;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-item:hover {
+  transform: translateY(5px) rotate(2deg) scale(1.05);
+  background-color: #74b72e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Text color change on hover */
+.forecast-item:hover .forecast-day {
+  color: #141313;
+}
+
+.forecast-item:hover .forecast-temp {
+  color: #111111;
+}
