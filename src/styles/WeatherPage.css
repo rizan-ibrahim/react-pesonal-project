@@ -1,0 +1,20 @@
+.weather-page {
+  background-color: rgb(236, 86, 5);
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.weather-page h1 {
+  text-align: center;
+  color: #f77f00;
+}
+
+.weather-page p {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}

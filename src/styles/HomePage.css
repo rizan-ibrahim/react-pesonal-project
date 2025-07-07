@@ -1,0 +1,23 @@
+.home-page {
+  max-width: 1200px;
+  background-color: rgb(236, 86, 5);
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.home-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Or center if you want vertical alignment */
+  gap: 2rem;
+}
+
+.left-panel {
+  flex: 1;
+}
+
+.right-panel {
+  flex: 2;
+}
