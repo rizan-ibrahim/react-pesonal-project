@@ -1,10 +1,10 @@
 import "../styles/ForecastItem.css";
-import logo from "../assets/logo.png";
-export const ForecastItem = ({ day, temp }) => {
+export const ForecastItem = ({ day, temp, icon }) => {
+  const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   return (
     <div className="forecast-item">
       <p>{day}</p>
-      <img src={logo} />
+      <img src={iconUrl} />
       <p>{temp}</p>
     </div>
   );
