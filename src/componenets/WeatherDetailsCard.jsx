@@ -1,8 +1,29 @@
 import "../styles/header.css";
 import "../styles/WeatherCard.css";
+import { ForecastList } from "./ForecastList";
 
-export const WeatherDetailsCard = ({ city, temp, condition, iconCode }) => {
+import { useContext } from "react";
+import { WeatherContext } from "../context/Weathercontext";
+export const WeatherDetailsCard = () => {
+  const { city, weatherData, error } = useContext(WeatherContext);
+
+  if (!weatherData || error) {
+    return (
+      <section>
+        <p>❌ No valid data available</p>
+        <p>Please search a valid city.</p>
+      </section>
+    );
+  }
+
+  const {
+    weather,
+    main: { temp },
+  } = weatherData;
+  const iconCode = weather[0].icon;
+  const description = weather[0].description;
   const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
   return (
     <div className="weather-card">
       <header>
@@ -10,10 +31,11 @@ export const WeatherDetailsCard = ({ city, temp, condition, iconCode }) => {
       </header>
       <section className="weather-section">
         <p>city: {city}</p>
-        <p>Temperature: {temp}°C</p>
-        <p>Condition: {condition}</p>
-        <img src={iconUrl} alt={condition} className="weather-icon" />
+        <p>Temperature: {Math.round(temp)}°C</p>
+        <p>Condition: {description}</p>
+        <img src={iconUrl} alt={description} className="weather-icon" />
       </section>
+      <ForecastList />
     </div>
   );
 };
